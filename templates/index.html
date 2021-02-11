@@ -11,16 +11,22 @@
 
     <div style="color:blue">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Cyberbulling Detection in Indian Languages</h2>
+            <h2>Cyberbullying Detection in Hindi-English Code-mixed language</h2>
             <h3>Insert Text</h3>
+  
+    	     <input id="first" type="text" name="text_input" placeholder="text input" required="required" />
+          
+           <!-- <textarea id="first" name="text input" rows="1" cols="50" required="required">
+            
+            </textarea>  -->
 
-    	     <input id="first" type="text" name="text_input"  placeholder="text input" required="required" />
-    
-
-           <br><br><button id="sub" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+           <br><br><button id="sub" type="submit" class="btn btn-primary btn-block btn-large" >Predict</button>
+           <!-- <button id="sub" type="reset" class="btn btn-primary btn-block btn-large">Reset</button>-->
            <br>
     </form>
-
+    <br>
+    <br>
+  {{ Input_text1 }}
    <br>
    <br>
    {{ prediction_text }}
@@ -118,9 +124,9 @@
   #first {
       border-radius: 14px;
       height: 65px;
-      width: 800px;
+      width: 500px;
       font-size: 20px;
-      text-align: center;
+      text-align: left;
   }
   
   #second {
