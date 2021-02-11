@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:500' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:500' rel='stylesheet' type='text/css'>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
- <div class="login">
-  <h1>Cyber Bullying Detection</h1>
-  
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="text_input" size="150" placeholder="text input" required="required" />
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Cyberbulling Detection in Indian Languages</h2>
+            <h3>Insert Text</h3>
+
+    	     <input id="first" type="text" name="text_input"  placeholder="text input" required="required" />
     
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+           <br><br><button id="sub" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+           <br>
     </form>
 
    <br>
@@ -38,6 +35,115 @@
 
  </div>
 
+ <style>
+  body {
+      background-color: lightslategray;
+      text-align: center;
+      padding: 0px;
+  }
+  
+  #research {
+      font-size: 18px;
+      width: 100px;
+      height: 23px;
+      top: 23px;
+  }
+  
+  #box {
+      border-radius: 60px;
+      border-color: 45px;
+      border-style: solid;
+      font-family: cursive;
+      text-align: center;
+      background-color: rgb(168, 131, 61);
+      font-size: medium;
+      position: absolute;
+      width: 700px;
+      bottom: 9%;
+      height: 850px;
+      right: 30%;
+      padding: 0px;
+      margin: 0px;
+      font-size: 14px;
+  }
+  
+  #fuel {
+      width: 83px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 20px;
+  }
+  
+  #fuel:hover {
+      background-color: coral;
+  }
+  
+  #research {
+      width: 99px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 18px;
+  }
+  
+  #research:hover {
+      background-color: coral;
+  }
+  
+  #resea {
+      width: 99px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 18px;
+  }
+  
+  #resea:hover {
+      background-color: coral;
+  }
+  
+  #sub {
+      width: 120px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 18px;
+  }
+  
+  #sub:hover {
+      background-color: darkcyan;
+  }
+  
+  #first {
+      border-radius: 14px;
+      height: 65px;
+      width: 800px;
+      font-size: 20px;
+      text-align: center;
+  }
+  
+  #second {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+  }
+  
+  #third {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+  }
+  
+  #fourth {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+  }
+</style>
 
 </body>
 </html>
