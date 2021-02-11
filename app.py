@@ -6,7 +6,7 @@ import time
 import numpy as np
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import model_from_json 
-import pickle
+import pickle5 as pickle
 app = Flask(__name__)
 #CORS(app)
 vocab_size = 12708
