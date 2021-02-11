@@ -5,9 +5,7 @@ Jinja2
 MarkupSafe
 Werkzeug
 numpy
-scipy
 scikit-learn
-matplotlib
+tensorflow-cpu
 pandas
-tensorflow
 keras
