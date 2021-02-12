@@ -6,7 +6,7 @@ import time
 import numpy as np
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import model_from_json 
-import pickle5 as pickle
+import pickle
 app = Flask(__name__)
 #CORS(app)
 vocab_size = 12708
@@ -38,15 +38,18 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    temp=request.get_data(as_text=True)
+    if request.method == 'POST':
+      form = request.form
+      user_input = form['paragraph']
+    #temp=request.get_data(as_text=True)
     start = time.time()
-    new_string = temp.replace("+", " ")
-    new_string = new_string.replace("%2C", " ")
-    new_string = new_string.replace("%3B", " ")
-    new_string = new_string.replace("text_input=", " ")
-    new_string= " ".join(new_string.split())
+    #new_string = bert_abstract.replace("+", " ")
+    #new_string = new_string.replace("%2C", " ")
+    #new_string = new_string.replace("%3B", " ")
+    #new_string = new_string.replace("text_input=", " ")
+    #new_string= " ".join(new_string.split())
     #print(temp)
-    new=[new_string]
+    new=[user_input]
     tok = tokenizer1.texts_to_sequences(new)
     pad = pad_sequences(tok, padding='post', maxlen=maxlen)
     y_pred1 = loaded_model.predict(pad)
@@ -59,7 +62,7 @@ def predict():
 
     tt = end - start
     cc = "all bal chal"
-    return render_template('index.html', Input_text1='Input Sentence : {}'.format(new_string),
+    return render_template('index.html', Input_text1='Input Sentence : {}'.format(user_input),
                            prediction_text='Input Sentence Indicates : {}'.format(output)
                            , Time_taken='Time Taken for Prediction : {:.2f}'.format(tt),
                            nonbully_prob ='Non-Bully  Probability : {:.2f}'.format(y_pred1[0,0]),

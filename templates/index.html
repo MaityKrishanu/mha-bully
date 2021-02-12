@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishanu</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -13,8 +13,13 @@
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Cyberbullying Detection in Hindi-English Code-mixed language</h2>
             <h3>Insert Text</h3>
+            <form role="form" method='POST' action='/'>
+                <div class="form-group">
+                  <textarea name="paragraph" class="form-control" id="first" placeholder="Enter a paragraph" style="max-width: 300px;" autofocus required>
+              
+          </textarea>
   
-    	     <input id="first" type="text" name="text_input" placeholder="text input" required="required" />
+    	     <!--<input id="first" type="text" name="text_input" placeholder="text input" required="required" />-->
           
            <!-- <textarea id="first" name="text input" rows="1" cols="50" required="required">
             
